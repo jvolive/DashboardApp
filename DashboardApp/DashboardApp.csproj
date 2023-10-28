@@ -131,5 +131,14 @@
   <ItemGroup>
     <Resource Include="icons8-edit-50 %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Klabin.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="jc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="copyright.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

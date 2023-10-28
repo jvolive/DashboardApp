@@ -9,50 +9,58 @@
         xmlns:hc="https://handyorg.github.io/handycontrol"
         xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen" MouseDown="Window_MouseDown">
     <Grid>
-        <StackPanel HorizontalAlignment="Left" Height="550" VerticalAlignment="Center" Width="220" Background="#FF197F52">
-            <hc:SideMenu BorderThickness="1" Width="188" Margin="32" Background="{x:Null}" BorderBrush="{x:Null}" SideBrush="{x:Null}" SubSideBrush="{x:Null}" Height="316">
+        <StackPanel HorizontalAlignment="Left" Height="550" VerticalAlignment="Top" Width="220" Background="#FF197F52">
+            <StackPanel Height="65" Orientation="Horizontal">
+                <Image Height="50"  Width="50" Source="/copyright.png"/>
+                <TextBlock TextWrapping="Wrap" Text="Maintenance Dashboard " Width="114" FontWeight="Bold" TextAlignment="Center" Foreground="#FFFBFBFB" Height="38"/>
+                <Image Height="50"  Width="52" Source="/copyright.png"/>
+            </StackPanel>
+
+
+            <hc:SideMenu BorderThickness="1" Width="187" Margin="32" Background="{x:Null}" BorderBrush="{x:Null}" SideBrush="{x:Null}" SubSideBrush="{x:Null}" Height="348">
                 <hc:Interaction.Triggers>
                     <hc:EventTrigger EventName="SelectionChanged">
                         <hc:EventToCommand Command="{Binding SwitchItemCmd}" PassEventArgsToCommand="True" />
                     </hc:EventTrigger>
                 </hc:Interaction.Triggers>
-                <hc:SideMenuItem Header="Home" Background="{x:Null}">
+                <hc:SideMenuItem Header="Home" Background="{x:Null}" Foreground="White">
                     <hc:SideMenuItem.Icon>
                         <Image Width="24" Height="24" Source="/icons8-home-50.png"/>
                     </hc:SideMenuItem.Icon>
                 </hc:SideMenuItem>
-                <hc:SideMenuItem Header="Dashboard" Background="{x:Null}">
+                <hc:SideMenuItem Header="Dashboard" Background="{x:Null}" Foreground="White">
                     <hc:SideMenuItem.Icon>
                         <Image Width="24" Height="24" Source="/icons8-dashboard-50 (1).png"/>
                     </hc:SideMenuItem.Icon>
                 </hc:SideMenuItem>
-                <hc:SideMenuItem Header="Work" Background="{x:Null}">
+                <hc:SideMenuItem Header="Work" Background="{x:Null}" Foreground="White">
                     <hc:SideMenuItem.Icon>
                         <Image Width="24" Height="24" Source="/icons8-work-50 (1).png"/>
                     </hc:SideMenuItem.Icon>
                 </hc:SideMenuItem>
-                <hc:SideMenuItem Header="Service" Background="{x:Null}">
+                <hc:SideMenuItem Header="Service" Background="{x:Null}" Foreground="White">
                     <hc:SideMenuItem.Icon>
                         <Image Width="24" Height="24" Source="/icons8-service-50 (1).png"/>
                     </hc:SideMenuItem.Icon>
                 </hc:SideMenuItem>
-                <hc:SideMenuItem Header="Project" Background="{x:Null}">
+                <hc:SideMenuItem Header="Project" Background="{x:Null}" Foreground="White">
                     <hc:SideMenuItem.Icon>
                         <Image Width="24" Height="24" Source="/icons8-project-50 (1).png"/>
                     </hc:SideMenuItem.Icon>
                 </hc:SideMenuItem>
-                <hc:SideMenuItem Header="Industrial" Background="{x:Null}">
+                <hc:SideMenuItem Header="Industrial" Background="{x:Null}" Foreground="White">
                     <hc:SideMenuItem.Icon>
                         <Image Width="24" Height="24" Source="/icons8-industrial-50 (1).png"/>
                     </hc:SideMenuItem.Icon>
                 </hc:SideMenuItem>
-                <hc:SideMenuItem Header="Edit" Background="{x:Null}">
+                <hc:SideMenuItem Header="Edit" Background="{x:Null}" Foreground="White">
                     <hc:SideMenuItem.Icon>
                         <Image Width="24" Height="24" Source="/icons8-edit-50 (1).png"/>
                     </hc:SideMenuItem.Icon>
                 </hc:SideMenuItem>
 
             </hc:SideMenu>
+
         </StackPanel>
 
     </Grid>
