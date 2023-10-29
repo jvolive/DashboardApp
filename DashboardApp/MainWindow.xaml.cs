@@ -23,45 +23,38 @@ namespace DashboardApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        private double percentOperante = 0.86; // 86%
+        private double percentInoperante = 0.14; // 14%
         public MainWindow()
         {
             InitializeComponent();
 
             DSeriesCollection = new SeriesCollection
+        {
+            new PieSeries
             {
-                new PieSeries
-                {
-                    Title = "Chrome",
-                    Values = new ChartValues<ObservableValue> { new ObservableValue(8) },
-                    DataLabels = true
-                },
-                new PieSeries
-                {
-                    Title = "Mozilla",
-                    Values = new ChartValues<ObservableValue> { new ObservableValue(6) },
-                    DataLabels = true
-                },
-                new PieSeries
-                {
-                    Title = "Opera",
-                    Values = new ChartValues<ObservableValue> { new ObservableValue(10) },
-                    DataLabels = true
-                },
-                new PieSeries
-                {
-                    Title = "Explorer",
-                    Values = new ChartValues<ObservableValue> { new ObservableValue(4) },
-                    DataLabels = true
-                }
-            };
+                Title = "Operante",
+                Values = new ChartValues<ObservableValue> { new ObservableValue(percentOperante) },
+                DataLabels = true,
+                Fill = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#15C51D")), // Cor vermelha para "Inoperante"
+                LabelPoint = point => string.Format("{0:P0}", point.Y)
 
+            },
+            new PieSeries
+            {
+                Title = "Inoperante",
+                Values = new ChartValues<ObservableValue> { new ObservableValue(percentInoperante) },
+                DataLabels = true,
+                Fill = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#e74c3c")),
+                LabelPoint = point => string.Format("{0:P0}", point.Y)
+            }
+        };
 
             DataContext = this;
-
         }
 
-
         public SeriesCollection DSeriesCollection { get; set; }
+
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {

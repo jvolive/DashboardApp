@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DashboardApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="650" Width="950"
+        Title="MainWindow" Height="650" Width="1050"
         xmlns:hc="https://handyorg.github.io/handycontrol"
         xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen" MouseDown="Window_MouseDown">
     <Grid Margin="0,0,-39,0">
@@ -48,7 +48,7 @@
         </StackPanel>
         <!-- <hc:SearchBar ShowClearButton="True" hc:InfoElement.TitleWidth="140" hc:InfoElement.Placeholder="Search" Style="{StaticResource SearchBarPlus}" Margin="255,21.48,30,495.52"/>-->
         <TextBlock HorizontalAlignment="Left" Height="35" Margin="244,23,0,0" TextWrapping="Wrap" Text="Dashboard" VerticalAlignment="Top" Width="230" FontWeight="Bold" FontSize="18"/>
-        <hc:Card Content="" HorizontalAlignment="Left" Height="217" Margin="235,58,0,0" VerticalAlignment="Top" Width="311" Background="#FFFDFDFD"/>
+        <hc:Card Content="" HorizontalAlignment="Left" Height="227" Margin="235,58,0,0" VerticalAlignment="Top" Width="431" Background="#FFFDFDFD"/>
         <TextBlock HorizontalAlignment="Left" Height="25" Margin="235,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" FontWeight="Bold"><Run Language="pt-br" Text="Equipment"/></TextBlock>
         <lvc:PieChart Name="Chart" Series="{Binding DSeriesCollection}" 
                       LegendLocation="Right" InnerRadius="40" Margin="289,58,443,365">
