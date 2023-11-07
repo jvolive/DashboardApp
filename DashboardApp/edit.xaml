@@ -1,0 +1,84 @@
+﻿<Window x:Class="DashboardApp.edit"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DashboardApp"
+        mc:Ignorable="d"
+        Title="edit" Height="650" Width="1050"
+        xmlns:hc="https://handyorg.github.io/handycontrol"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen" MouseDown="Window_MouseDown">
+    <Grid Margin="0,0,-39,0">
+        <StackPanel HorizontalAlignment="Left" Height="650" VerticalAlignment="Center" Width="220" Background="#FF197F52">
+            <StackPanel Height="65" Orientation="Horizontal">
+                <Image Height="50"  Width="50" Source="/copyright.png"/>
+                <TextBlock TextWrapping="Wrap" Text="Maintenance Dashboard " Width="114" FontWeight="Bold" TextAlignment="Center" Foreground="#FFFBFBFB" Height="38"/>
+                <Image Height="50"  Width="52" Source="/copyright.png"/>
+            </StackPanel>
+
+            <Path Data="M0,60 L220,60" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="1" Margin="0,10,-1,0" Stretch="Fill" Stroke="#FFDEDDDD" VerticalAlignment="Top" Width="221"/>
+
+            <hc:SideMenu BorderThickness="1" Width="187" Margin="32" Background="{x:Null}" BorderBrush="{x:Null}" SideBrush="{x:Null}" SubSideBrush="{x:Null}" Height="348">
+                <hc:Interaction.Triggers>
+                    <hc:EventTrigger EventName="SelectionChanged">
+                        <hc:EventToCommand Command="{Binding SwitchItemCmd}" PassEventArgsToCommand="True" />
+                    </hc:EventTrigger>
+                </hc:Interaction.Triggers>
+                <hc:SideMenuItem Header="Home" Background="{x:Null}" Foreground="White">
+                    <hc:SideMenuItem.Icon>
+                        <Image Width="24" Height="24" Source="/icons8-home-50.png"/>
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+                <hc:SideMenuItem Header="Dashboard" Background="{x:Null}" Foreground="White">
+                    <hc:SideMenuItem.Icon>
+                        <Image Width="24" Height="24" Source="/icons8-dashboard-50 (1).png"/>
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+                <hc:SideMenuItem Header="Work" Background="{x:Null}" Foreground="White">
+                    <hc:SideMenuItem.Icon>
+                        <Image Width="24" Height="24" Source="/icons8-work-50 (1).png"/>
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+                <hc:SideMenuItem Header="Edit" Background="{x:Null}" Foreground="White">
+                    <hc:SideMenuItem.Icon>
+                        <Image Width="24" Height="24" Source="/icons8-edit-50 (1).png"/>
+                    </hc:SideMenuItem.Icon>
+                </hc:SideMenuItem>
+            </hc:SideMenu>
+        </StackPanel>
+        <TextBlock HorizontalAlignment="Left" Height="35" Margin="244,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" FontWeight="Bold" FontSize="18"><Run Language="pt-br" Text="Edit"/></TextBlock>
+
+        <StackPanel Margin="304,63,516,229">
+
+            <TextBlock Height="25" TextWrapping="Wrap" Width="140" FontWeight="Bold"><Run Language="pt-br" Text="Equipment 1"/></TextBlock>
+
+            <Label Content="Equipament name:"/>
+            <TextBox x:Name="txtNome" Width="200" Margin="0,0,0,10" TextChanged="txtNome_TextChanged"/>
+
+
+            <Label Content="Last maintance date:"/>
+            <DatePicker x:Name="dpData" Width="200" Margin="0,0,0,10"/>
+
+            <Label Content="Description:"/>
+            <TextBox x:Name="txtDescricao" Width="200" Height="100" Margin="0,0,0,10"/>
+
+
+        </StackPanel>
+        <StackPanel Margin="706,58,124,244">
+
+            <TextBlock Height="25" TextWrapping="Wrap" Width="140" FontWeight="Bold"><Run Language="pt-br" Text="Equipment 2"/></TextBlock>
+
+            <Label Content="Equipament name:"/>
+            <TextBox x:Name="txtNome1" Width="200" Margin="0,0,0,10" TextChanged="txtNome_TextChanged"/>
+
+
+            <Label Content="Last maintance date:"/>
+            <DatePicker x:Name="dpData1" Width="200" Margin="0,0,0,10"/>
+
+            <Label Content="Description:"/>
+            <TextBox x:Name="txtDescricao1" Width="200" Height="100" Margin="0,0,0,10"/>
+        </StackPanel>
+
+        <Button Content="Save" Click="Salvar_Click" HorizontalAlignment="Left" Margin="244,566,0,0" VerticalAlignment="Top" Width="155" Height="49" FontWeight="Bold" FontSize="16"/>
+    </Grid>
+</Window>
