@@ -9,6 +9,8 @@
         xmlns:hc="https://handyorg.github.io/handycontrol"
         xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen" MouseDown="Window_MouseDown">
     <Grid Margin="0,0,-39,0">
+        <hc:Card Content="" HorizontalAlignment="Left" Height="227" Margin="235,290,0,0" VerticalAlignment="Top" Width="385" Background="#FFFDFDFD"/>
+
         <StackPanel HorizontalAlignment="Left" Height="650" VerticalAlignment="Center" Width="220" Background="#FF197F52">
             <StackPanel Height="65" Orientation="Horizontal">
                 <Image Height="50"  Width="50" Source="/copyright.png"/>
@@ -48,17 +50,49 @@
         </StackPanel>
         <!-- <hc:SearchBar ShowClearButton="True" hc:InfoElement.TitleWidth="140" hc:InfoElement.Placeholder="Search" Style="{StaticResource SearchBarPlus}" Margin="255,21.48,30,495.52"/>-->
         <TextBlock HorizontalAlignment="Left" Height="35" Margin="244,23,0,0" TextWrapping="Wrap" Text="Dashboard" VerticalAlignment="Top" Width="230" FontWeight="Bold" FontSize="18"/>
-        <hc:Card Content="" HorizontalAlignment="Left" Height="227" Margin="235,58,0,0" VerticalAlignment="Top" Width="431" Background="#FFFDFDFD"/>
-        <TextBlock HorizontalAlignment="Left" Height="25" Margin="235,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" FontWeight="Bold"><Run Language="pt-br" Text="Equipment"/></TextBlock>
-        <lvc:PieChart Name="Chart" Series="{Binding DSeriesCollection}" 
-                      LegendLocation="Right" InnerRadius="40" Margin="289,58,443,365">
+        <hc:Card Content="" HorizontalAlignment="Left" Height="227" Margin="235,58,0,0" VerticalAlignment="Top" Width="385" Background="#FFFDFDFD"/>
+        <TextBlock HorizontalAlignment="Left" Height="25" Margin="235,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" FontWeight="Bold"><Run Text="Equipment"/><Run Language="pt-br" Text=" 1"/></TextBlock>
+        <lvc:PieChart x:Name="Chart" Series="{Binding DSeriesCollection1}" 
+            LegendLocation="Right" InnerRadius="40" Margin="289,58,469,365">
             <lvc:PieChart.ChartLegend>
-                <lvc:DefaultLegend BulletSize="20"></lvc:DefaultLegend>
+                <lvc:DefaultLegend BulletSize="20"/>
             </lvc:PieChart.ChartLegend>
             <lvc:PieChart.DataTooltip>
-                <lvc:DefaultTooltip BulletSize="20"></lvc:DefaultTooltip>
+                <lvc:DefaultTooltip BulletSize="20"/>
             </lvc:PieChart.DataTooltip>
         </lvc:PieChart>
+        <lvc:PieChart x:Name="Chart2" Series="{Binding DSeriesCollection2}" 
+            LegendLocation="Right" InnerRadius="40" Margin="289,290,469,133">
+            <lvc:PieChart.ChartLegend>
+                <lvc:DefaultLegend BulletSize="20"/>
+            </lvc:PieChart.ChartLegend>
+            <lvc:PieChart.DataTooltip>
+                <lvc:DefaultTooltip BulletSize="20"/>
+            </lvc:PieChart.DataTooltip>
+        </lvc:PieChart>
+        <TextBlock HorizontalAlignment="Left" Height="25" Margin="235,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" FontWeight="Bold"><Run Text="Equipment"/><Run Text=" "/><Run Language="pt-br" Text="2"/></TextBlock>
+        <hc:Card Content="" HorizontalAlignment="Left" Height="227" Margin="650,290,0,0" VerticalAlignment="Top" Width="385" Background="#FFFDFDFD"/>
+        <lvc:PieChart x:Name="Chart3" Series="{Binding DSeriesCollection3}" 
+            LegendLocation="Right" InnerRadius="40" Margin="704,290,54,133">
+            <lvc:PieChart.ChartLegend>
+                <lvc:DefaultLegend BulletSize="20"/>
+            </lvc:PieChart.ChartLegend>
+            <lvc:PieChart.DataTooltip>
+                <lvc:DefaultTooltip BulletSize="20"/>
+            </lvc:PieChart.DataTooltip>
+        </lvc:PieChart>
+        <hc:Card Content="" HorizontalAlignment="Left" Height="227" Margin="650,58,0,0" VerticalAlignment="Top" Width="385" Background="#FFFDFDFD"/>
+        <lvc:PieChart x:Name="Chart4" Series="{Binding DSeriesCollection4}" 
+            LegendLocation="Right" InnerRadius="40" Margin="704,58,54,365">
+            <lvc:PieChart.ChartLegend>
+                <lvc:DefaultLegend BulletSize="20"/>
+            </lvc:PieChart.ChartLegend>
+            <lvc:PieChart.DataTooltip>
+                <lvc:DefaultTooltip BulletSize="20"/>
+            </lvc:PieChart.DataTooltip>
+        </lvc:PieChart>
+        <TextBlock HorizontalAlignment="Left" Height="25" Margin="650,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" FontWeight="Bold"><Run Text="Equipment"/><Run Text=" "/><Run Language="pt-br" Text="3"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="25" Margin="650,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" FontWeight="Bold"><Run Text="Equipment"/><Run Text=" "/><Run Language="pt-br" Text="4"/></TextBlock>
 
     </Grid>
 </Window>

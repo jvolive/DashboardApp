@@ -23,10 +23,20 @@ namespace DashboardApp
         {
             InitializeComponent();
         }
+        private void Salvar_Click(object sender, RoutedEventArgs e)
+        {
+            // Lógica para manipular o clique no botão "Salvar"
+        }
+
 
         private void txtNome_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
         }
     }
 }
